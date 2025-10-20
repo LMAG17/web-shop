@@ -24,6 +24,7 @@ export default function ProductButtons({ product }: Props) {
     <div className="mt-2 flex items-center justify-between gap-2">
       <div className="flex items-center gap-2">
         <Button
+          data-testid="decrease-button"
           size="icon"
           variant="outline"
           onClick={() => decrease(product.id)}
@@ -35,12 +36,18 @@ export default function ProductButtons({ product }: Props) {
           {quantity}
         </span>
 
-        <Button size="icon" variant="outline" onClick={() => add(product)}>
+        <Button
+          data-testid="add-button"
+          size="icon"
+          variant="outline"
+          onClick={() => add(product)}
+        >
           <Plus className="h-4 w-4" />
         </Button>
       </div>
 
       <Button
+        data-testid="remove-button"
         size="icon"
         variant="destructive"
         onClick={() => remove(product.id)}

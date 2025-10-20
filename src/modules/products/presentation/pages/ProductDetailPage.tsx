@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 import {
   useGetProductById,
   useGetProductsByCategory,
-} from "@/modules/products/domain/usecases/get-products";
+} from "@/modules/products/domain/usecases/getProducts";
 import { ProductCard } from "@/modules/products/presentation/components/ProductCard";
 import ProductButtons from "@/modules/products/presentation/components/ProductButtons";
 
@@ -46,7 +46,7 @@ export const ProductDetailPage = () => {
           </div>
         )}
 
-        {suggestions.length > 0 && (
+        {!!product && suggestions.length > 0 && (
           <div>
             <h2 className="text-xl font-bold mb-4">You may also like</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

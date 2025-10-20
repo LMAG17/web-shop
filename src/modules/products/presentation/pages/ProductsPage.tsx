@@ -2,7 +2,7 @@
 
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Product } from "@/modules/products/domain/product.types";
-import { useProducts } from "@/modules/products/domain/usecases/useInfiniteProducts";
+import { useProducts } from "@/modules/products/domain/usecases/useProducts";
 import { Spinner } from "@/shared/components/Spinner";
 import { useEffect, useRef } from "react";
 import { ProductCard } from "@/modules/products/presentation/components/ProductCard";
