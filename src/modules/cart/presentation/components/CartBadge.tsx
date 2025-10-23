@@ -11,7 +11,7 @@ export const CartBadge = () => {
   const count = useAppSelector(selectCartCount);
 
   return (
-    <div className="relative">
+    <div className="relative" data-testid="cart-badge">
       <Link href="/cart" className="flex items-center gap-2">
         <Button variant="ghost" size="icon">
           <ShoppingCart className="w-5 h-5" />

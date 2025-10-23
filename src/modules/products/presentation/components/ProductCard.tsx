@@ -8,7 +8,7 @@ import ProductButtons from "@/modules/products/presentation/components/ProductBu
 
 export const ProductCard = ({ product }: { product: Product }) => {
   return (
-    <Card className="hover:shadow-md transition p-2 flex flex-col justify-between">
+    <Card className="hover:shadow-md transition p-2 pt-4 flex flex-col justify-between">
       <Link href={`/products/${product.id}`}>
         <CardHeader>
           <CardTitle className="text-md font-semibold">
@@ -19,9 +19,10 @@ export const ProductCard = ({ product }: { product: Product }) => {
           <Image
             src={product.thumbnail}
             alt={product.title}
-            width={200}
-            height={200}
-            className="rounded-md object-cover mb-2"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="rounded-md object-cover mb-2 w-full"
           />
           <div className="flex flex-col gap-2">
             <p className="text-gray-600 text-sm">${product.price}</p>
