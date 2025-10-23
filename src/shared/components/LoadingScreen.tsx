@@ -1,10 +1,8 @@
-'use client'
-
-import { Card, CardContent } from '@/components/ui/card'
-import { Loader2 } from 'lucide-react'
+import { Card, CardContent } from "@/components/ui/card";
+import { Loader2 } from "lucide-react";
 
 interface LoadingScreenProps {
-  message?: string
+  message?: string;
 }
 
 export const LoadingScreen = ({ message }: LoadingScreenProps) => {
@@ -13,9 +11,9 @@ export const LoadingScreen = ({ message }: LoadingScreenProps) => {
       <Card className="p-6 flex flex-col items-center justify-center gap-4">
         <Loader2 className="animate-spin w-10 h-10 text-blue-500" />
         <CardContent className="text-center text-gray-600 text-sm">
-          {message || 'Loading...'}
+          {message || "Loading..."}
         </CardContent>
       </Card>
     </div>
-  )
-}
+  );
+};

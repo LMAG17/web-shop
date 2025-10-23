@@ -1,5 +1,3 @@
-"use client";
-
 import { ErrorScreen } from "@/shared/components/ErrorScreen";
 import { LoadingScreen } from "@/shared/components/LoadingScreen";
 import { ReactNode } from "react";

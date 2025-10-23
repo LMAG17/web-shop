@@ -1,5 +1,3 @@
-"use client";
-
 import { CartItem } from "@/modules/cart/domain/cart.types";
 import ProductButtons from "@/modules/products/presentation/components/ProductButtons";
 import Image from "next/image";

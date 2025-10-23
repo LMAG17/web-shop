@@ -1,5 +1,3 @@
-"use client";
-
 import { CartBadge } from "@/modules/cart/presentation/components/CartBadge";
 import Link from "next/link";
 
