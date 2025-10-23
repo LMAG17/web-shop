@@ -25,7 +25,7 @@ jobs:
 
       - name: 🧩 Run Jest tests
         run: yarn test --passWithNoTests
-    
+
       - name: 🏗️ Build Next.js app
         run: yarn build
 
@@ -34,6 +34,9 @@ jobs:
 
       - name: 🚀 Run Playwright tests
         run: yarn test:e2e
+        env:
+          NEXT_PUBLIC_BASE_URL: "https://dummyjson.com"
+        timeout-minutes: 5
 
       - name: 📸 Upload Playwright artifacts
         if: failure()
