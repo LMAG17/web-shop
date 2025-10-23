@@ -31,7 +31,9 @@ export const ProductsPage = () => {
       {!!error && (
         <Alert variant="destructive">
           <AlertDescription>
-            {error ? (error as any).data?.message : "Error loading products"}
+            {error
+              ? (error as { data: { message: string } }).data?.message
+              : "Error loading products"}
           </AlertDescription>
         </Alert>
       )}
