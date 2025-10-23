@@ -22,6 +22,7 @@ const eslintConfig = [
       "**/*.test.tsx",
       "**/__tests__/**",
       "e2e/",
+      "./src/core/store/customStorage.ts",
     ],
   },
 ];
