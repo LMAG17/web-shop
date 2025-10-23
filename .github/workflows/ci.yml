@@ -23,18 +23,18 @@ jobs:
       - name: 📦 Install dependencies
         run: yarn install --frozen-lockfile
 
-      # 🧪 Unit tests (Jest)
       - name: 🧩 Run Jest tests
         run: yarn test --passWithNoTests
+    
+      - name: 🏗️ Build Next.js app
+        run: yarn build
 
-      # 🌐 E2E tests (Playwright)
       - name: 🎭 Install Playwright browsers
         run: npx playwright install --with-deps
 
       - name: 🚀 Run Playwright tests
         run: yarn test:e2e
 
-      # 📸 Guarda screenshots/videos si hay errores
       - name: 📸 Upload Playwright artifacts
         if: failure()
         uses: actions/upload-artifact@v4
